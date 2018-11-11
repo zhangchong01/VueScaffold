@@ -63,7 +63,7 @@
         </el-col>
 
         <!--对话框-->
-        <el-dialog title="特征选择" v-model="dialogVisible" :close-on-click-modal="true" :show-close="true" top="18vh">
+        <el-dialog title="特征选择" v-model="dialogVisible" :close-on-click-modal="true" :show-close="true" top="13vh"> <!--18-->
             <section class="chart-container">
                 <el-row>
                     <el-col :span="24">

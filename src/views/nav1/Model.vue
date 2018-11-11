@@ -62,7 +62,7 @@
         </el-col>
 
         <!--对话框-->
-        <el-dialog title="诊断模型构建" v-model="dialogVisible" :close-on-click-modal="true" :show-close="true" top="18vh">
+        <el-dialog title="诊断模型构建" v-model="dialogVisible" :close-on-click-modal="true" :show-close="true" top="13vh">
             <!--列表-->
             <el-table id="model" :data="models" highlight-current-row v-loading="listLoading"
                       @selection-change="selsChange" @sort-change="sortChange">
