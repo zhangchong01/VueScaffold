@@ -59,7 +59,7 @@
         </el-col>
 
         <!--对话框-->
-        <el-dialog custom-class="analysis" title="预测分析" v-model="dialogVisible" :close-on-click-modal="true" :show-close="true" top="18vh" size="large">
+        <el-dialog custom-class="analysis" title="预测分析" v-model="dialogVisible" :close-on-click-modal="true" :show-close="true" top="11vh" size="large">
             <section class="chart-container">
                 <el-row>
                     <el-col :span="12">
