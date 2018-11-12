@@ -62,7 +62,7 @@
         </el-col>
 
         <!--对话框-->
-        <el-dialog title="诊断模型构建" v-model="dialogVisible" :close-on-click-modal="true" :show-close="true" top="13vh">
+        <el-dialog title="诊断模型构建" v-model="dialogVisible" :close-on-click-modal="true" :show-close="true" top="18vh">
             <!--列表-->
             <el-table id="model" :data="models" highlight-current-row v-loading="listLoading"
                       @selection-change="selsChange" @sort-change="sortChange">
@@ -76,8 +76,8 @@
                 </el-table-column>
             </el-table>
             <div slot="footer" class="dialog-footer" style="padding:0px 10px;">
-                <el-button type="primary" @click.native="dialogCancel" size="small">重新构建</el-button>
-                <el-button type="success" @click.native="dialogCancel" size="small">保存</el-button>
+                <el-button type="primary" @click.native="dialogCancel" size="small">重构模型</el-button>
+                <el-button type="success" @click.native="dialogCancel" size="small">保存模型</el-button>
                 <el-button @click.native="dialogCancel" size="small">关闭</el-button>
             </div>
         </el-dialog>
@@ -86,6 +86,7 @@
 
 <script>
     import "./Model.less";
+    import data from '../../api/data.json'
     export default {
         data() {
             return {
@@ -94,51 +95,7 @@
                     y: '',
                     cycle: ''
                 },
-                features: [{
-                    "id": "Google",
-                    "name": "h",
-                    "gender": "value",
-                    "age": "value",
-                    "tc": "value",
-                    "tg": "value",
-                    "hdlc": "value",
-                    "ldlc": "value",
-                    "sbp": "value",
-                    "dbp": "value",
-                    "fpg": "value",
-                    "fcp": "value",
-                    "fins": "value",
-                    "hbalc": "value",
-                    "2hfpg": "value",
-                    "2hfcp": "value",
-                    "2hfins": "value",
-                    "crp": "value",
-                    "ua": "value",
-                    "bmi": "value",
-                    "whr": "value"
-                }, {
-                    "id": "Google",
-                    "name": "h",
-                    "gender": "value",
-                    "age": "value",
-                    "tc": "value",
-                    "tg": "value",
-                    "hdlc": "value",
-                    "ldlc": "value",
-                    "sbp": "value",
-                    "dbp": "value",
-                    "fpg": "value",
-                    "fcp": "value",
-                    "fins": "value",
-                    "hbalc": "value",
-                    "2hfpg": "value",
-                    "2hfcp": "value",
-                    "2hfins": "value",
-                    "crp": "value",
-                    "ua": "value",
-                    "bmi": "value",
-                    "whr": "value"
-                }],
+                features: data,
                 models: [{
                     "value": "0.6",
                     "rate": "94.52%"
@@ -162,7 +119,7 @@
                     "rate": "88.91%"
                 }],
                 dialogVisible: false,//对话框是否显示
-                total: 0,
+                total: 3998,
                 page: 1,
                 pageSize: 10
             }

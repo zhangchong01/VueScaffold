@@ -66,7 +66,7 @@
 
 <script>
     import './Plan.less'
-
+    import data from '../../api/data.json'
     export default {
         data() {
             return {
@@ -74,51 +74,7 @@
                 total: 0,
                 page: 1,
                 pageSize: 10,
-                records: [{
-                    "id": "Google",
-                    "name": "h",
-                    "gender": "value",
-                    "age": "value",
-                    "tc": "value",
-                    "tg": "value",
-                    "hdlc": "value",
-                    "ldlc": "value",
-                    "sbp": "value",
-                    "dbp": "value",
-                    "fpg": "value",
-                    "fcp": "value",
-                    "fins": "value",
-                    "hbalc": "value",
-                    "2hfpg": "value",
-                    "2hfcp": "value",
-                    "2hfins": "value",
-                    "crp": "value",
-                    "ua": "value",
-                    "bmi": "value",
-                    "whr": "value"
-                }, {
-                    "id": "Google",
-                    "name": "h",
-                    "gender": "value",
-                    "age": "value",
-                    "tc": "value",
-                    "tg": "value",
-                    "hdlc": "value",
-                    "ldlc": "value",
-                    "sbp": "value",
-                    "dbp": "value",
-                    "fpg": "value",
-                    "fcp": "value",
-                    "fins": "value",
-                    "hbalc": "value",
-                    "2hfpg": "value",
-                    "2hfcp": "value",
-                    "2hfins": "value",
-                    "crp": "value",
-                    "ua": "value",
-                    "bmi": "value",
-                    "whr": "value"
-                }]
+                records: data
             }
         },
         methods: {

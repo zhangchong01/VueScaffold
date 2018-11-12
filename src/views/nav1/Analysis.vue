@@ -59,7 +59,7 @@
         </el-col>
 
         <!--对话框-->
-        <el-dialog title="预测分析" v-model="dialogVisible" :close-on-click-modal="true" :show-close="true" top="9vh" size="large">
+        <el-dialog custom-class="analysis" title="预测分析" v-model="dialogVisible" :close-on-click-modal="true" :show-close="true" top="18vh" size="large">
             <section class="chart-container">
                 <el-row>
                     <el-col :span="12">
@@ -90,6 +90,7 @@
 
 <script>
     import './Analysis.less'
+    import data from '../../api/data.json'
     import echarts from 'echarts'
 
     export default {
@@ -102,55 +103,11 @@
                 },
                 gender: '',
                 dataPercent: '100%',
-                features: [{
-                    "id": "Google",
-                    "name": "h",
-                    "gender": "value",
-                    "age": "value",
-                    "tc": "value",
-                    "tg": "value",
-                    "hdlc": "value",
-                    "ldlc": "value",
-                    "sbp": "value",
-                    "dbp": "value",
-                    "fpg": "value",
-                    "fcp": "value",
-                    "fins": "value",
-                    "hbalc": "value",
-                    "2hfpg": "value",
-                    "2hfcp": "value",
-                    "2hfins": "value",
-                    "crp": "value",
-                    "ua": "value",
-                    "bmi": "value",
-                    "whr": "value"
-                }, {
-                    "id": "Google",
-                    "name": "h",
-                    "gender": "value",
-                    "age": "value",
-                    "tc": "value",
-                    "tg": "value",
-                    "hdlc": "value",
-                    "ldlc": "value",
-                    "sbp": "value",
-                    "dbp": "value",
-                    "fpg": "value",
-                    "fcp": "value",
-                    "fins": "value",
-                    "hbalc": "value",
-                    "2hfpg": "value",
-                    "2hfcp": "value",
-                    "2hfins": "value",
-                    "crp": "value",
-                    "ua": "value",
-                    "bmi": "value",
-                    "whr": "value"
-                }],
+                features: data,
                 dialogVisible: false,//对话框是否显示
                 radarChart: '',
                 pieChart: '',
-                total: 0,
+                total: 3998,
                 page: 1,
                 pageSize: 10
             }

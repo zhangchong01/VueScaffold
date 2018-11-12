@@ -63,15 +63,17 @@
         </el-col>
 
         <!--对话框-->
-        <el-dialog title="特征选择" v-model="dialogVisible" :close-on-click-modal="true" :show-close="true" top="13vh"> <!--18-->
+        <el-dialog custom-class="features" title="特征选择" v-model="dialogVisible" :close-on-click-modal="true" :show-close="true" top="18vh">
             <section class="chart-container">
                 <el-row>
                     <el-col :span="24">
-                        <div id="featureChart" style="width:100%; height:450px;"></div>
+                        <div id="featureChart" style="width:100%; height:380px;"></div>
                     </el-col>
                 </el-row>
             </section>
             <div slot="footer" class="dialog-footer" style="padding:0px 10px;">
+                <el-button type="primary" @click.native="dialogCancel" size="small">重新选择</el-button>
+                <el-button type="success" @click.native="dialogCancel" size="small">保存特征集</el-button>
                 <el-button @click.native="dialogCancel" size="small">关闭</el-button>
             </div>
         </el-dialog>
@@ -80,6 +82,7 @@
 
 <script>
     import './Features.less'
+    import data from '../../api/data.json'
     import echarts from 'echarts'
 
     export default {
@@ -91,54 +94,10 @@
                     cycle: ''
                 },
                 dataPercent: '100%',
-                features: [{
-                    "id": "Google",
-                    "name": "h",
-                    "gender": "value",
-                    "age": "value",
-                    "tc": "value",
-                    "tg": "value",
-                    "hdlc": "value",
-                    "ldlc": "value",
-                    "sbp": "value",
-                    "dbp": "value",
-                    "fpg": "value",
-                    "fcp": "value",
-                    "fins": "value",
-                    "hbalc": "value",
-                    "2hfpg": "value",
-                    "2hfcp": "value",
-                    "2hfins": "value",
-                    "crp": "value",
-                    "ua": "value",
-                    "bmi": "value",
-                    "whr": "value"
-                }, {
-                    "id": "Google",
-                    "name": "h",
-                    "gender": "value",
-                    "age": "value",
-                    "tc": "value",
-                    "tg": "value",
-                    "hdlc": "value",
-                    "ldlc": "value",
-                    "sbp": "value",
-                    "dbp": "value",
-                    "fpg": "value",
-                    "fcp": "value",
-                    "fins": "value",
-                    "hbalc": "value",
-                    "2hfpg": "value",
-                    "2hfcp": "value",
-                    "2hfins": "value",
-                    "crp": "value",
-                    "ua": "value",
-                    "bmi": "value",
-                    "whr": "value"
-                }],
+                features: data,
                 dialogVisible: false,//对话框是否显示
                 echart: '',
-                total: 0,
+                total: 3998,
                 page: 1,
                 pageSize: 10
             }
