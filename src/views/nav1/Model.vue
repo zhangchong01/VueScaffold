@@ -91,9 +91,9 @@
         data() {
             return {
                 param: {
-                    a: '',
-                    y: '',
-                    cycle: ''
+                    a: 0.2,
+                    y: 1,
+                    cycle: 200
                 },
                 features: data,
                 models: [{

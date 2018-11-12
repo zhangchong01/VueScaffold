@@ -71,10 +71,10 @@
         data() {
             return {
                 gender: '',
-                total: 0,
+                records: data,
+                total: 3998,
                 page: 1,
-                pageSize: 10,
-                records: data
+                pageSize: 10
             }
         },
         methods: {

@@ -72,13 +72,17 @@
             </section>
             <div>
                 <div>
-                    <span style="font-size: 16px;"><a style="font-weight:bold;">诊断：</a>患有糖尿病的可能性为<a style="font-weight:bold;">非常大</a></span>
+                    <span style="font-size: 16px;"><a style="font-weight:bold;">诊断：</a>
+                        <a style="font-weight:bold;">正常</a>的可能性为<a style="font-weight:bold;">10.60%</a>
+                        ；患有<a style="font-weight:bold;">I型糖尿病</a>的可能性为<a style="font-weight:bold;">0.95%</a>
+                        ；患有<a style="font-weight:bold;">II型糖尿病</a>的可能性为<a style="font-weight:bold;">88.45%</a>
+                    </span>
                 </div>
                 <div>
-                    <span style="font-size: 16px;"><a style="font-weight:bold;">分析：</a>身体质量指数偏高，腰臀比过大，体脂过多，易导致胰岛素敏感性下降，运动量极低，和平均水平相差较大，无既往相关病史，可通过各方面调节降低糖尿病发病率。</span>
+                    <span style="font-size: 16px;"><a style="font-weight:bold;">分析：</a>身体质量指数(BMI)偏高，腰臀比过大，体脂过多，空腹血糖和空腹胰岛素指标过高，导致胰岛素敏感性下降，糖尿病风险极高。</span>
                 </div>
                 <div>
-                    <span style="font-size: 16px;"><a style="font-weight:bold;">建议：</a>膳食纤维和维生素要充分，严格控制好两餐时间，饮食规律，切忌暴饮暴食；增大运动量，餐后多散步，吸烟饮酒频率应适当降低。</span>
+                    <span style="font-size: 16px;"><a style="font-weight:bold;">建议：</a>膳食纤维和维生素要充分，严格控制好两餐时间，饮食规律，切忌暴饮暴食，建议减少晚餐摄入量；增大运动量，餐后多散步，吸烟饮酒频率应适当降低。</span>
                 </div>
             </div>
             <div slot="footer" class="dialog-footer" style="padding:0px 10px;">
@@ -137,21 +141,21 @@
                             }
                         },
                         indicator: [
-                            {name: '年龄', max: 120},
-                            {name: '高血压/高血脂病史', max: 1},
-                            {name: '身体质量指数(BMI)', max: 50},
-                            {name: '腰臀比(WHR)', max: 2},
-                            {name: '吸烟频率', max: 1},
-                            {name: '饮酒频率', max: 1},
-                            {name: '饮食量', max: 1},
-                            {name: '运动量', max: 1},
+                            {name: 'FPG', max: 10},
+                            {name: 'FCP', max: 2},
+                            {name: 'FINS', max: 20},
+                            {name: 'HbA1c', max: 10},
+                            {name: 'BP', max: 300},
+                            {name: 'LDL-C', max: 5},
+                            {name: 'TC', max: 10},
+                            {name: 'BMI', max: 50},
                         ]
                     },
                     series: [{
                         type: 'radar',
                         data: [
                             {
-                                value: [25, 0, 36, 1.1, 0.6, 0.8, 1, 0.2],
+                                value: [6.2, 1.3, 17, 7, 150, 3.2, 5.3, 24.5],
                                 name: '实际指标　　　　',
                                 areaStyle: {
                                     normal: {
@@ -160,7 +164,7 @@
                                 }
                             },
                             {
-                                value: [33.2409, 0.3490, 31.9926, 0.8100, 0.2770, 0.2297, 0.8000, 0.6000],
+                                value: [5, 1, 10, 5, 100, 1.6, 3.99, 21.2],
                                 name: '平均指标',
                                 areaStyle: {
                                     normal: {
@@ -180,14 +184,14 @@
                     legend: {
                         orient: 'vertical',
                         x: 'left',
-                        data: ['年龄', '高血压/高血脂病史', '身体质量指数(BMI)', '腰臀比(WHR)', '吸烟频率', '饮酒频率', '饮食量', '运动量'],
+                        data: ['FPG', 'FCP', 'FINS', 'HbA1c', 'BP', 'LDL-C', 'TC', 'BMI'],
                         textStyle: {
                             // fontSize: 15
                         }
                     },
                     series: [
                         {
-                            name: '访问来源',
+                            name: '最优特征',
                             type: 'pie',
                             radius: '70%',
                             center: ['58%', '50%'],
@@ -203,14 +207,14 @@
                                 }
                             },
                             data: [
-                                {value: 24, name: '年龄'},
-                                {value: 0, name: '高血压/\n高血脂病史'},
-                                {value: 22.3, name: '身体质量指数(BMI)'},
-                                {value: 0.82, name: '腰臀比(WHR)'},
-                                {value: 0.1, name: '吸烟频率'},
-                                {value: 0.2, name: '饮酒频率'},
-                                {value: 0.2, name: '饮食量'},
-                                {value: 0.5, name: '运动量'}
+                                {value: 358, name: 'FPG'},
+                                {value: 358, name: 'FCP'},
+                                {value: 358, name: 'FINS'},
+                                {value: 358, name: 'HbA1c'},
+                                {value: 666, name: 'BP'},
+                                {value: 333, name: 'LDL-C'},
+                                {value: 333, name: 'TC'},
+                                {value: 188, name: 'BMI'}
                             ]
                         }
                     ]
