@@ -40,7 +40,7 @@
             <el-table-column prop="fpg" label="FPG" min-width="30"></el-table-column>
             <el-table-column prop="fcp" label="FCP" min-width="30"></el-table-column>
             <el-table-column prop="fins" label="FINS" min-width="30"></el-table-column>
-            <el-table-column prop="hbalc" label="HbAlc" min-width="30"></el-table-column>
+            <el-table-column prop="hbalc" label="HbA1c" min-width="30"></el-table-column>
             <el-table-column prop="2hfpg" label="2hFPG" min-width="30"></el-table-column>
             <el-table-column prop="2hfcp" label="2hFCP" min-width="30"></el-table-column>
             <el-table-column prop="2hfins" label="2hFINS" min-width="30"></el-table-column>
