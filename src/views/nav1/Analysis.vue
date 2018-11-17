@@ -72,10 +72,9 @@
             </section>
             <div>
                 <div>
-                    <span style="font-size: 16px;"><a style="font-weight:bold;">诊断：</a>
-                        <a style="font-weight:bold;">正常</a>的可能性为<a style="font-weight:bold;">10.60%</a>
-                        ；患有<a style="font-weight:bold;">I型糖尿病</a>的可能性为<a style="font-weight:bold;">0.95%</a>
-                        ；患有<a style="font-weight:bold;">II型糖尿病</a>的可能性为<a style="font-weight:bold;">88.45%</a>
+                    <span style="font-size: 16px;"><a style="font-weight:bold;">预测：</a>
+                        <a style="font-weight:bold;">正常</a>的可能性为<a style="font-weight:bold;">10.65%</a>
+                        ；患有<a style="font-weight:bold;">糖尿病</a>的可能性为<a style="font-weight:bold;">89.35%</a>
                     </span>
                 </div>
                 <div>
