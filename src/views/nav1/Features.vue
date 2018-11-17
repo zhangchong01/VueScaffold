@@ -7,12 +7,20 @@
                     <el-input placeholder="参数值" v-model="param.a" style="width: 120px;" size="small">
                         <template slot="prepend">α=</template>
                     </el-input>
-                    <el-input placeholder="参数值" v-model="param.y" style="width: 120px;margin-left: 10px;" size="small">
-                        <template slot="prepend">γ=</template>
+                    <el-input placeholder="参数值" v-model="param.b" style="width: 120px;margin-left: 10px;" size="small">
+                        <template slot="prepend">β=</template>
                     </el-input>
-                    <el-input placeholder="参数值" v-model="param.cycle" style="width: 140px;margin-left: 10px;"
-                              size="small">
-                        <template slot="prepend">cycle=</template>
+                    <el-input placeholder="参数值" v-model="param.c" style="width: 120px;margin-left: 10px;" size="small">
+                        <template slot="prepend">ε=</template>
+                    </el-input>
+                    <el-input placeholder="参数值" v-model="param.cmax" style="width: 120px;margin-left: 10px;" size="small">
+                        <template slot="prepend">MAX_ε=</template>
+                    </el-input>
+                    <el-input placeholder="参数值" v-model="param.cmin" style="width: 120px;margin-left: 10px;" size="small">
+                        <template slot="prepend">MIN_ε=</template>
+                    </el-input>
+                    <el-input placeholder="参数值" v-model="param.d" style="width: 120px;margin-left: 10px;" size="small">
+                        <template slot="prepend">δ=</template>
                     </el-input>
                 </el-form-item>
                 <el-form-item label="样本规模:">
@@ -89,9 +97,12 @@
         data() {
             return {
                 param: {
-                    a: 0.2,
-                    y: 1,
-                    cycle: 200
+                    a: 3,
+                    b: 4,
+                    c: 60,
+                    cmax: 1.3,
+                    cmin: 0.1,
+                    d: 5
                 },
                 dataPercent: '100%',
                 features: data,

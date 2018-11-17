@@ -10,15 +10,11 @@
                     </el-upload>
                 </el-form-item>
                 <el-form-item label="设置参数:">
-                    <el-input placeholder="参数值" v-model="param.a" style="width: 120px;" size="small">
-                        <template slot="prepend">α=</template>
+                    <el-input placeholder="参数值" v-model="param.sup" style="width: 120px;" size="small">
+                        <template slot="prepend">min_sup=</template>
                     </el-input>
-                    <el-input placeholder="参数值" v-model="param.y" style="width: 120px;margin-left: 10px;" size="small">
-                        <template slot="prepend">γ=</template>
-                    </el-input>
-                    <el-input placeholder="参数值" v-model="param.cycle" style="width: 140px;margin-left: 10px;"
-                              size="small">
-                        <template slot="prepend">cycle=</template>
+                    <el-input placeholder="参数值" v-model="param.conf" style="width: 120px;margin-left: 10px;" size="small">
+                        <template slot="prepend">min_conf=</template>
                     </el-input>
                 </el-form-item>
                 <el-form-item>
@@ -91,9 +87,8 @@
         data() {
             return {
                 param: {
-                    a: 0.2,
-                    y: 1,
-                    cycle: 200
+                    sup: 0.5,
+                    conf: 0.7
                 },
                 features: data,
                 models: [{
