@@ -87,7 +87,7 @@
         data() {
             return {
                 param: {
-                    sup: 0.5,
+                    sup: 0.1,
                     conf: 0.7
                 },
                 features: data,

@@ -13,10 +13,12 @@
                     <el-input placeholder="参数值" v-model="param.c" style="width: 120px;margin-left: 10px;" size="small">
                         <template slot="prepend">ε=</template>
                     </el-input>
-                    <el-input placeholder="参数值" v-model="param.cmax" style="width: 120px;margin-left: 10px;" size="small">
+                    <el-input placeholder="参数值" v-model="param.cmax" style="width: 120px;margin-left: 10px;"
+                              size="small">
                         <template slot="prepend">MAX_ε=</template>
                     </el-input>
-                    <el-input placeholder="参数值" v-model="param.cmin" style="width: 120px;margin-left: 10px;" size="small">
+                    <el-input placeholder="参数值" v-model="param.cmin" style="width: 120px;margin-left: 10px;"
+                              size="small">
                         <template slot="prepend">MIN_ε=</template>
                     </el-input>
                     <el-input placeholder="参数值" v-model="param.d" style="width: 120px;margin-left: 10px;" size="small">
@@ -71,7 +73,8 @@
         </el-col>
 
         <!--对话框-->
-        <el-dialog custom-class="features" title="特征选择" v-model="dialogVisible" :close-on-click-modal="true" :show-close="true" top="18vh">
+        <el-dialog custom-class="features" title="特征选择" v-model="dialogVisible" :close-on-click-modal="true"
+                   :show-close="true" top="18vh">
             <section class="chart-container">
                 <el-row>
                     <el-col :span="24">
@@ -124,7 +127,7 @@
                     legend: {
                         orient: 'vertical',
                         x: 'left',
-                        data: ['其他', '血脂', '血压', '葡萄糖耐量', '年龄', 'BMI', 'TC', 'LDL-C', 'SBP', 'DBP', 'FPG', 'FCP', 'FINS', '2hFPG', '2hFINS', 'HbA1c']
+                        data: ['其他', '血脂', '血压', '葡萄糖耐量', 'BMI', 'TC', 'LDL-C', 'SBP', 'DBP', 'FPG', 'FCP', 'FINS', 'HbA1c']
                     },
                     series: [
                         {
@@ -143,7 +146,7 @@
                                 }
                             },
                             data: [
-                                {value: 335, name: '其他', selected: true},
+                                {value: 335, name: '其他'},
                                 {value: 666, name: '血脂'},
                                 {value: 666, name: '血压'},
                                 {value: 2148, name: '葡萄糖耐量'}
@@ -155,7 +158,7 @@
                             radius: ['40%', '55%'],
                             label: {
                                 normal: {
-                                    formatter: '{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
+                                    formatter: '{a|{a}}{abg|}\n{hr|}\n\t\t{b|{b}}\t\t{per|{d}%}\t\t',
                                     backgroundColor: '#eee',
                                     borderColor: '#aaa',
                                     borderWidth: 1,
@@ -186,18 +189,18 @@
                                 }
                             },
                             data: [
-                                {value: 147, name: '年龄'},
-                                {value: 188, name: 'BMI'},
-                                {value: 333, name: 'TC'},
-                                {value: 333, name: 'LDL-C'},
+                                // {value: 147, name: '年龄'},
+                                {value: 335, name: 'BMI'},
+                                {value: 366, name: 'TC'},
+                                {value: 300, name: 'LDL-C'},
                                 {value: 333, name: 'SBP'},
                                 {value: 333, name: 'DBP'},
-                                {value: 358, name: 'FPG'},
-                                {value: 358, name: 'FCP'},
-                                {value: 358, name: 'FINS'},
-                                {value: 358, name: '2hFPG'},
-                                {value: 358, name: '2hFINS'},
-                                {value: 358, name: 'HbA1c'}
+                                {value: 574, name: 'FPG'},
+                                {value: 500, name: 'FCP'},
+                                {value: 574, name: 'FINS'},
+                                {value: 500, name: 'HbA1c'}
+                                // {value: 358, name: '2hFPG'},
+                                // {value: 358, name: '2hFINS'},
                             ]
                         }
                     ]
